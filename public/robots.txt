@@ -1,0 +1,103 @@
+# https://www.robotstxt.org/robotstxt.html
+# robots.txt for Amazons Fiber Internet Website
+
+# Allow all web crawlers to access most content
+User-agent: *
+Allow: /
+
+# Disallow access to private/sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /user/
+Disallow: /customer/
+Disallow: /billing/
+Disallow: /payment/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /config/
+
+# Disallow common React.js build artifacts and development files
+Disallow: /build/
+Disallow: /dist/
+Disallow: /.git/
+Disallow: /src/
+Disallow: /public/manifest.json
+Disallow: /*.map$
+
+# Allow access to important pages for SEO
+Allow: /plans
+Allow: /pricing
+Allow: /packages
+Allow: /coverage
+Allow: /contact
+Allow: /blog
+Allow: /faq
+Allow: /about
+Allow: /features
+Allow: /installation
+
+# Allow access to static assets
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+Allow: /icons/
+Allow: /static/
+
+# Special rules for specific crawlers
+
+# Google Bot - full access for SEO
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Social media crawlers for link previews
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Speed testing and monitoring bots
+User-agent: GTmetrix
+Allow: /
+
+User-agent: Pingdom
+Allow: /
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Disallow: /
+
+# Set crawl delay for general bots to be respectful
+Crawl-delay: 1
+
+# Sitemap location (add your sitemap URL here)
+Sitemap: https://amazons.co.ke/sitemap.xml
+Sitemap: https://amazons.co.ke/sitemap-blog.xml
+
+# Additional instructions
+# Clean-param: utm_source&utm_medium&utm_campaign (for analytics parameters)
+
+# Host directive (replace with your actual domain)
+Host: amazons.co.ke
